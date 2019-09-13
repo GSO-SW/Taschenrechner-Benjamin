@@ -12,6 +12,7 @@ namespace TaschenrechnerBenjamin
 {
     public partial class Form1 : Form
     {
+        string rechenoperator;
         public Form1()
         {
             InitializeComponent();
@@ -19,13 +20,38 @@ namespace TaschenrechnerBenjamin
 
         private void TbxZahl2_TextChanged(object sender, EventArgs e)
         {
-            int zahl1 = Convert.ToInt32(tbxZahl1.Text);
-            int zahl2 = Convert.ToInt32(tbxZahl2.Text);
-            int ergebnis = zahl1 + zahl2;
-
-            tbxErgebnis.Text = Convert.ToString(ergebnis);
-
 
         }
+
+        private void BtnPlus_Click(object sender, EventArgs e)
+        {
+            rechenoperator = "+";
+        }
+
+        private void BtnMinus_Click(object sender, EventArgs e)
+        {
+            rechenoperator = "-";
+        }
+
+        private void BtnGleich_Click(object sender, EventArgs e)
+        {
+            if (rechenoperator == "+")
+            {
+                int ergebnis = Convert.ToInt32(tbxZahl1.Text) + Convert.ToInt32(tbxZahl2.Text);
+                tbxErgebnis.Text = ergebnis.ToString();
+
+            }
+            else
+            {
+                int ergebnis = Convert.ToInt32(tbxZahl1.Text) - Convert.ToInt32(tbxZahl2.Text);
+                tbxErgebnis.Text = ergebnis.ToString();
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
     }
-}
+           
+        }
+    }
+

@@ -33,6 +33,9 @@
             this.lblZahl1 = new System.Windows.Forms.Label();
             this.lblZahl2 = new System.Windows.Forms.Label();
             this.tbxErgebnis = new System.Windows.Forms.TextBox();
+            this.btnPlus = new System.Windows.Forms.Button();
+            this.btnMinus = new System.Windows.Forms.Button();
+            this.btnGleich = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tbxZahl1
@@ -70,16 +73,49 @@
             // 
             // tbxErgebnis
             // 
-            this.tbxErgebnis.Location = new System.Drawing.Point(460, 76);
+            this.tbxErgebnis.Location = new System.Drawing.Point(610, 76);
             this.tbxErgebnis.Name = "tbxErgebnis";
             this.tbxErgebnis.Size = new System.Drawing.Size(100, 22);
             this.tbxErgebnis.TabIndex = 4;
+            // 
+            // btnPlus
+            // 
+            this.btnPlus.Location = new System.Drawing.Point(123, 145);
+            this.btnPlus.Name = "btnPlus";
+            this.btnPlus.Size = new System.Drawing.Size(59, 23);
+            this.btnPlus.TabIndex = 5;
+            this.btnPlus.Text = "+";
+            this.btnPlus.UseVisualStyleBackColor = true;
+            this.btnPlus.Click += new System.EventHandler(this.BtnPlus_Click);
+            // 
+            // btnMinus
+            // 
+            this.btnMinus.Location = new System.Drawing.Point(123, 174);
+            this.btnMinus.Name = "btnMinus";
+            this.btnMinus.Size = new System.Drawing.Size(59, 23);
+            this.btnMinus.TabIndex = 6;
+            this.btnMinus.Text = "-";
+            this.btnMinus.UseVisualStyleBackColor = true;
+            this.btnMinus.Click += new System.EventHandler(this.BtnMinus_Click);
+            // 
+            // btnGleich
+            // 
+            this.btnGleich.Location = new System.Drawing.Point(518, 77);
+            this.btnGleich.Name = "btnGleich";
+            this.btnGleich.Size = new System.Drawing.Size(55, 23);
+            this.btnGleich.TabIndex = 7;
+            this.btnGleich.Text = "=";
+            this.btnGleich.UseVisualStyleBackColor = true;
+            this.btnGleich.Click += new System.EventHandler(this.BtnGleich_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnGleich);
+            this.Controls.Add(this.btnMinus);
+            this.Controls.Add(this.btnPlus);
             this.Controls.Add(this.tbxErgebnis);
             this.Controls.Add(this.lblZahl2);
             this.Controls.Add(this.lblZahl1);
@@ -87,6 +123,7 @@
             this.Controls.Add(this.tbxZahl1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -99,6 +136,9 @@
         private System.Windows.Forms.Label lblZahl1;
         private System.Windows.Forms.Label lblZahl2;
         private System.Windows.Forms.TextBox tbxErgebnis;
+        private System.Windows.Forms.Button btnPlus;
+        private System.Windows.Forms.Button btnMinus;
+        private System.Windows.Forms.Button btnGleich;
     }
 }
 
