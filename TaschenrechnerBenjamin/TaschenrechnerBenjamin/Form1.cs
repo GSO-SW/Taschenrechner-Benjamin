@@ -46,9 +46,14 @@ namespace TaschenrechnerBenjamin
                 int ergebnis = Convert.ToInt32(tbxZahl1.Text) - Convert.ToInt32(tbxZahl2.Text);
                 tbxErgebnis.Text = ergebnis.ToString();
             }
-            else
+            else if(rechenoperator=="*")
             {
                 int ergebnis = Convert.ToInt32(tbxZahl1.Text) * Convert.ToInt32(tbxZahl2.Text);
+                tbxErgebnis.Text = ergebnis.ToString();
+            }
+            else
+            {
+                int ergebnis = Convert.ToInt32(tbxZahl1.Text) / Convert.ToInt32(tbxZahl2.Text);
                 tbxErgebnis.Text = ergebnis.ToString();
             }
 
@@ -61,6 +66,11 @@ namespace TaschenrechnerBenjamin
         private void BtnMultiplikation_Click(object sender, EventArgs e)
         {
             rechenoperator = "*";
+        }
+
+        private void BtnDivision_Click(object sender, EventArgs e)
+        {
+            rechenoperator = "/";
         }
     }
     }

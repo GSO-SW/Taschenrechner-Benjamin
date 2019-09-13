@@ -37,6 +37,7 @@
             this.btnMinus = new System.Windows.Forms.Button();
             this.btnGleich = new System.Windows.Forms.Button();
             this.btnMultiplikation = new System.Windows.Forms.Button();
+            this.btnDivision = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tbxZahl1
@@ -119,11 +120,22 @@
             this.btnMultiplikation.UseVisualStyleBackColor = true;
             this.btnMultiplikation.Click += new System.EventHandler(this.BtnMultiplikation_Click);
             // 
+            // btnDivision
+            // 
+            this.btnDivision.Location = new System.Drawing.Point(254, 173);
+            this.btnDivision.Name = "btnDivision";
+            this.btnDivision.Size = new System.Drawing.Size(75, 23);
+            this.btnDivision.TabIndex = 9;
+            this.btnDivision.Text = "/";
+            this.btnDivision.UseVisualStyleBackColor = true;
+            this.btnDivision.Click += new System.EventHandler(this.BtnDivision_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnDivision);
             this.Controls.Add(this.btnMultiplikation);
             this.Controls.Add(this.btnGleich);
             this.Controls.Add(this.btnMinus);
@@ -152,6 +164,7 @@
         private System.Windows.Forms.Button btnMinus;
         private System.Windows.Forms.Button btnGleich;
         private System.Windows.Forms.Button btnMultiplikation;
+        private System.Windows.Forms.Button btnDivision;
     }
 }
 
