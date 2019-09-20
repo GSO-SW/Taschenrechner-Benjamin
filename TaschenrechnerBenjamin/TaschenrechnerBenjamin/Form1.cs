@@ -51,10 +51,12 @@ namespace TaschenrechnerBenjamin
                 int ergebnis = Convert.ToInt32(tbxZahl1.Text) * Convert.ToInt32(tbxZahl2.Text);
                 tbxErgebnis.Text = ergebnis.ToString();
             }
-            else if (rechenoperator == "/")
+            else if(rechenoperator=="x²")
             {
-                int ergebnis = Convert.ToInt32(tbxZahl1.Text) / Convert.ToInt32(tbxZahl2.Text);
+                int ergebnis = Convert.ToInt32(tbxZahl1.Text) * Convert.ToInt32(tbxZahl1.Text);
                 tbxErgebnis.Text = ergebnis.ToString();
+                tbxZahl2.Text="---";
+                tbxZahl2.TextAlign = HorizontalAlignment.Center;
             }
             else 
             {
@@ -80,6 +82,11 @@ namespace TaschenrechnerBenjamin
         private void BtnDivision_Click(object sender, EventArgs e)
         {
             rechenoperator = "/";
+        }
+
+        private void BtnQuadrat_Click(object sender, EventArgs e)
+        {
+            rechenoperator = "x²";
         }
 
         private void BtnWurzel_Click(object sender, EventArgs e)

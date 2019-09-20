@@ -38,6 +38,7 @@
             this.btnGleich = new System.Windows.Forms.Button();
             this.btnMultiplikation = new System.Windows.Forms.Button();
             this.btnDivision = new System.Windows.Forms.Button();
+            this.btnQuadrat = new System.Windows.Forms.Button();
             this.btnWurzel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -131,6 +132,16 @@
             this.btnDivision.UseVisualStyleBackColor = true;
             this.btnDivision.Click += new System.EventHandler(this.BtnDivision_Click);
             // 
+            // btnQuadrat
+            // 
+            this.btnQuadrat.Location = new System.Drawing.Point(343, 144);
+            this.btnQuadrat.Name = "btnQuadrat";
+            this.btnQuadrat.Size = new System.Drawing.Size(75, 23);
+            this.btnQuadrat.TabIndex = 10;
+            this.btnQuadrat.Text = "x²";
+            this.btnQuadrat.UseVisualStyleBackColor = true;
+            this.btnQuadrat.Click += new System.EventHandler(this.BtnQuadrat_Click);
+            // 
             // btnWurzel
             // 
             this.btnWurzel.Location = new System.Drawing.Point(377, 173);
@@ -146,6 +157,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnQuadrat);
             this.Controls.Add(this.btnWurzel);
             this.Controls.Add(this.btnDivision);
             this.Controls.Add(this.btnMultiplikation);
@@ -177,6 +189,7 @@
         private System.Windows.Forms.Button btnGleich;
         private System.Windows.Forms.Button btnMultiplikation;
         private System.Windows.Forms.Button btnDivision;
+        private System.Windows.Forms.Button btnQuadrat;
         private System.Windows.Forms.Button btnWurzel;
     }
 }
